@@ -1,0 +1,11 @@
+services:
+
+  tester-backend:
+    image: tester
+    container_name: tester_backend
+    build: ./
+    ports:
+      - "80:4000"
+    environment:
+      - PORT=4000
+      - RABBIT=amqps://mkipeipc:yEbSmguXcWKdCUV__rRllYFgn1Ni1LFb@jackal.rmq.cloudamqp.com/mkipeipc
